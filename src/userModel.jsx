@@ -15,12 +15,18 @@ function UserEditModal({ user, onClose, onUpdate }) {
       email,
     };
     try {
-      await updateUser(user.id, updatedData);
-      toast.success("User updated successfully!", {
-        position: "top-center"
-      });
-      onUpdate(user.id, updatedData);  // Notify parent to update the user list
-      onClose();  // Close the modal
+      const data = await updateUser(user.id, updatedData);
+
+      if(data){
+        toast.success("User updated successfully!", {
+          position: "top-center"
+        });
+        
+      }
+     
+      onUpdate(user.id, updatedData);  
+        onClose(); 
+      
     } catch (error) {
       toast.error('Error updating the user.');
       console.error('Error updating user:', error);
