@@ -28,14 +28,17 @@ function Users() {
     setSearchParams({ page: newPage });
   };
 
+
+  const displayedUsers = users.slice(0, 6);
+
   return (
     <div className="min-h-screen p-8 bg-gradient-to-br from-purple-100 via-blue-100 to-pink-100">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-semibold text-gray-900 mb-8 text-center bg-gray-100 p-6 rounded-md shadow-md">
           User Directory
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {users.map((user) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {displayedUsers.map((user) => (
             <UserCard key={user.id} user={user} onDelete={handleDeleteUser} />
           ))}
         </div>
