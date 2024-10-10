@@ -1,6 +1,7 @@
 # EmployWise Assignment
 
-# Live site - https://employ-wise-frontend-assignment.vercel.app/
+# Live site - https://employwise-assignment-frontend.netlify.app/
+
 ## Project Features
 
 1. **User Authentication**:
