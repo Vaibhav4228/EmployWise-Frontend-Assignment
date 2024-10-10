@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { updateUser } from './utils/api';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function UserEditModal({ user, onClose, onUpdate }) {
   const [firstName, setFirstName] = useState(user.first_name);
@@ -14,19 +15,14 @@ function UserEditModal({ user, onClose, onUpdate }) {
       last_name: lastName,
       email,
     };
-    try {
-      const data = await updateUser(user.id, updatedData);
 
-      if(data){
-        toast.success("User updated successfully!", {
-          position: "top-center"
-        });
-        
-      }
-     
+   try {
+      await updateUser(user.id, updatedData);
+      toast.success("user updated successfully!",{
+        position:"top-center"
+      })
       onUpdate(user.id, updatedData);  
-        onClose(); 
-      
+      onClose(); 
     } catch (error) {
       toast.error('Error updating the user.');
       console.error('Error updating user:', error);

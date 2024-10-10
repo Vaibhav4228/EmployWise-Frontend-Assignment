@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { loginUser } from '../utils/api';
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Lock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -67,7 +67,7 @@ function Login({ setToken }) {
           </button>
         </form>
       </div>
-      <ToastContainer />
+     
     </div>
   );
 }

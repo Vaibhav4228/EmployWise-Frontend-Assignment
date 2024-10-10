@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import Users from "./components/Users";
@@ -7,6 +7,14 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
+
+  useEffect(() => {
+    if (token) {
+      localStorage.setItem("token", token);
+    } else {
+      localStorage.removeItem("token");
+    }
+  }, [token]);
 
   return (
     <Router>
