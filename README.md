@@ -60,7 +60,7 @@
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/yourusername/user-management-app.git](https://github.com/Vaibhav4228/EmployWise-Frontend-Assignment]
+   git clone https://github.com/yourusername/user-management-app.git](https://github.com/Vaibhav4228/EmployWise-Frontend-Assignment
    cd EmployWise-Frontend-Assignment
    ```
 2. Inatall dependencies
