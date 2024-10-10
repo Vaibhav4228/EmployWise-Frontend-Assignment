@@ -55,4 +55,21 @@
 - **Lucid React**: Lucid React for icons
 - **react-router-dom**: For routing the pages
 
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone [https://github.com/yourusername/user-management-app.git](https://github.com/Vaibhav4228/EmployWise-Frontend-Assignment]
+   cd EmployWise-Frontend-Assignment
+   ```
+2. Inatall dependencies
+   ```bash
+   npm install (in your project root directory)
+   ```
+3. Run Your Project
+   ```bash
+   npm run dev (to run application)
+   ```
+
 ---
